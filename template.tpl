@@ -9,9 +9,9 @@ Google may provide), as modified from time to time.
 ___INFO___
 
 {
-  "displayName": "Simple Facebook Pixel",
+  "displayName": "Advanced Facebook Pixel",
   "__wm": "VGVtcGxhdGUtQXV0aG9yX0ZhY2Vib29rLVNpbW8tQWhhdmE\u003d",
-  "description": "Simple Facebook Pixel implementation that supports Advanced Matching, eCommerce works with server-side GTM Conversions API and Single Page Applications.",
+  "description": "Advanced Facebook Pixel implementation that supports Advanced Matching, eCommerce works with server-side GTM Conversions API and Single Page Applications.",
   "securityGroups": [],
   "categories": [
     "ADVERTISING",
