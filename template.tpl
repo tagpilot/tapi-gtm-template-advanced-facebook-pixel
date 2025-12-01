@@ -107,7 +107,7 @@ const standardEventNames = {
   add_payment_info: 'AddPaymentInfo',
   add_to_cart: 'AddToCart',
   add_to_wishlist: 'AddToWishlist',
-  signup: 'CompleteRegistration',
+  sign_up: 'CompleteRegistration',
   generate_lead: 'Lead',
   begin_checkout: 'InitiateCheckout',
   'gtm.dom': 'PageView',
@@ -166,10 +166,15 @@ log('mappedEventName', mappedEventName);
 const params = {};
 const userData = {};
 
-if (data.userData && data.userData.email && data.userData.phone_number) {
+if (data.userData && (data.userData.email || data.userData.phone_number)) {
   userData.em = data.userData.email;
   userData.ph = data.userData.phone_number;
   userData.external_id = data.externalId;
+
+  if (data.userData.address&& data.userData.address[0]) {
+    userData.fn = data.userData.address[0].first_name;
+    userData.ln = data.userData.address[0].last_name;
+  }
 }
 
 if (mappedEventName === 'Purchase' && ecommerce.transaction_id) {
